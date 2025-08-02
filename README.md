@@ -1,3 +1,4 @@
+# <p align=center>`Awesome Remote Sensing Spatiotemporal Fusion Models`</p>
 <p align="center">
   <a href="https://github.com/ArboriseRS/Awesome-Spatiotemporal-Fusion-Models/graphs/commit-activity">
     <img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" alt="Maintenance">
@@ -16,7 +17,6 @@
   </a>
 </p>
 
-# <p align=center>`Awesome Remote Sensing Spatiotemporal Fusion Models`</p>
 
 🌟 **A collection of papers, datasets, benchmarks, and code for Spatiotemporal Fusion Models.**
 
