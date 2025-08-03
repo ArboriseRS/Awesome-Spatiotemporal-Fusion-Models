@@ -51,6 +51,7 @@ Weighted reconstruction-based （WR-based） methods、Unmixing-based methods、
 |      FSDAF       | [A flexible spatiotemporal method for fusing satellite images with different resolutions](https://www.sciencedirect.com/science/article/abs/pii/S0034425715302042?via%3Dihub)                                                                         | 2016 |                  Hybrid                  |            [Link](https://xzhu-lab.github.io/Pride/Open-Source-Code.html)             |
 |      Fit-FC      | [Spatio-temporal fusion for daily Sentinel-2 images](https://www.sciencedirect.com/science/article/abs/pii/S0034425717305096?via%3Dihub)                                                                                                              | 2018 |         Weighted reconstruction          |                     [Link](https://github.com/qunmingwang/Fit-FC)                     |
 |      IFSDAF      | [An Improved Flexible Spatiotemporal DAta Fusion (IFSDAF) method for producing high spatiotemporal resolution normalized difference vegetation index time series](https://www.sciencedirect.com/science/article/abs/pii/S0034425719301038?via%3Dihub) | 2019 |                 Unmixing                 |                     [Link](https://github.com/wangwei1208/IFSDAF)                     |
+|    FSDAF 2.0     | [FSDAF 2.0: Improving the performance of retrieving land cover changes and preserving spatial details](https://www.sciencedirect.com/science/article/abs/pii/S0034425720303436?via%3Dihub)                                                            | 2020 |                  Hybrid                  |          [Link](https://github.com/Andy-cumt/FSDAF2_GUI?tab=readme-ov-file)           |
 | modified-ESTARFM | [An enhanced spatiotemporal fusion method – Implications for coal fire monitoring using satellite imagery](https://www.sciencedirect.com/science/article/pii/S0303243419309237?via%3Dihub)                                                            | 2020 |         Weighted reconstruction          | [Link](https://github.com/raktim-ghosh/Spatiotemporal-Data-Fusion?tab=readme-ov-file) |
 |       VSDF       | [VSDF: A variation-based spatiotemporal data fusion method](https://www.sciencedirect.com/science/article/pii/S0034425722004151?via%3Dihub)                                                                                                           | 2022 |                  Hybrid                  |                      [Link](https://github.com/ChenXuAxel/VSDF)                       |
 |      OBSTFM      | [A Flexible Object-Level Processing Strategy to Enhance the Weight Function-Based Spatiotemporal Fusion Method](https://ieeexplore.ieee.org/document/9912409)                                                                                         | 2022 |               Object-Level               |  [Link](https://github.com/Andy-cumt/Object-level-spatiotemporal-fusion-models)<br>   |
@@ -128,33 +129,38 @@ Weighted reconstruction-based （WR-based） methods、Unmixing-based methods、
 ---
 
 ## 🎯 Datasets & Benchmarks
+### Datasets
 
-| **Dataset** | **Source**              | **Resolution**        | **Region**          |                                      Download                                      |
-| ----------- | ----------------------- | --------------------- | ------------------- | :--------------------------------------------------------------------------------: |
-| CIA         | Landsat, MODIS          | 30m, 500m, 16 days    | Coleambally, AU     |                [Link](https://data.csiro.au/collection/csiro:5846)                 |
-| LGC         | Landsat-5 TM, MODIS     | 30m, 500m, 16 days    | Lower Gwydir, AU    |                [Link](https://data.csiro.au/collection/csiro:5846)                 |
-| MOD09GA     | MODIS                   | 500m, Monthly         | North China Plain   |                  [Link](https://ladsweb.modaps.eosdis.nasa.gov/)                   |
-| BC          | Sentinel-2 MSI, S3 OLCI | 10m, 300m, Monthly    | SW Butte County, CA | [Link](https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-2) |
-| IC          | Sentinel-2 MSI, S3 OLCI | 10m, 300m, Monthly    | Imperial County, CA | [Link](https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-2) |
-| OISST       | AVHRR, Buoy, Ship       | 0.25° × 0.25°, Daily  | Global Ocean        |        [Link](https://www.ncei.noaa.gov/products/optimum-interpolation-sst)        |
-| OSTIA       | Multi-sat IR, MW, Buoy  | 0.05° × 0.05°, Daily  | Global Ocean        |   [Link](https://data.marine.copernicus.eu/products?option=com_csw&task=results)   |
-| G1SST       | Geo, Polar Sats         | 0.01° × 0.01°, Daily  | Global Ocean        |    [Link](https://podaac.jpl.nasa.gov/dataset/JPL_OUROCEAN-L4UHfnd-GLOB-G1SST)     |
-| EARS        | ECMWF Model             | 0.25° × 0.25°, Hourly | Global Ocean        |                           [Link](https://rda.ucar.edu/)                            |
-| In-situ     | Buoy Measurements       | 16 Stations, Hourly   | Korean waters       |                        [Link](https://www.nifs.go.kr/kodc)                         |
-| TRMM        | NASA GSFC PPS           | 0.25°, 3-hourly       | 50°N–50°S           |                    [Link](https://gpm.nasa.gov/data/directory)                     |
-| GridSat     | NOAA                    | 0.07°, 3-hourly       | 70°S–70°N           |         [Link](https://www.ncei.noaa.gov/products/satellite/gridded-data)          |
-| DEM         | USGS, NASA SRTM         | 90m, N/A              | 60°N–56°S           |                    [Link](https://srtm.csi.cgiar.org/srtmdata/)                    |
-| Rain        | CMDC (China)            | Point, 12-hourly      | China               |                            [Link](https://data.cma.cn/)                            |
-| S2          | Sentinel-2              | 10m, 5-day revisit    | Dafeng, China       |                        [Link](https://scilb.copernicus.eu/)                        |
-| GOCI-II     | GOCI-II Satellite       | 500m, hourly          | Dafeng, China       |                       [Link](https://www.nosc.go.kr/main.do)                       |
-| Wuhan       | GF, Landsat             | 8m, 30m               | Wuhan, China        |               [Link](https://github.com/lixinghua5540/Wuhan-dataset)               |
-| Daxing      | LS8 OLI, MODIS          | 30m, 500m, 8 days     | Daxing, Beijing     |       [Link](https://pan.baidu.com/s/1ymgud6tnY6XB5CTCXPUfnw#list/path=%2F)        |
-| AHB         | LS8 OLI, MOD09GA        | 30m, 500m, 16 days    | Ar Horqin Banner    |       [Link](https://pan.baidu.com/s/1ymgud6tnY6XB5CTCXPUfnw#list/path=%2F)        |
-| Tianjin     | LS8 OLI, MOD02HKM       | 30m, 500m, 16 days    | Tianjin, China      |       [Link](https://pan.baidu.com/s/1ymgud6tnY6XB5CTCXPUfnw#list/path=%2F)        |
-| Terra       | Multi-source            | 0.1°, 3-hourly        | Global              |              [Link](https://github.com/CityMind-Lab/NeurIPS24-Terra)               |
-| E-SMILE     | Landsat-8               | 30m, 500m, 16 days    | Global              |        [Link](https://www.kaggle.com/datasets/yuxiawhu/extra-data-in-smile)        |
+| **Dataset** | **Source**              | **Resolution**        | **Region**          |                                              Download                                              |
+| ----------- | ----------------------- | --------------------- | ------------------- | :------------------------------------------------------------------------------------------------: |
+| CIA         | Landsat, MODIS          | 30m, 500m, 16 days    | Coleambally, AU     |                        [Link](https://data.csiro.au/collection/csiro:5846)                         |
+| LGC         | Landsat-5 TM, MODIS     | 30m, 500m, 16 days    | Lower Gwydir, AU    |                        [Link](https://data.csiro.au/collection/csiro:5846)                         |
+| MOD09GA     | MODIS                   | 500m, Monthly         | North China Plain   |                          [Link](https://ladsweb.modaps.eosdis.nasa.gov/)                           |
+| BC          | Sentinel-2 MSI, S3 OLCI | 10m, 300m, Monthly    | SW Butte County, CA |         [Link](https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-2)         |
+| IC          | Sentinel-2 MSI, S3 OLCI | 10m, 300m, Monthly    | Imperial County, CA |         [Link](https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-2)         |
+| OISST       | AVHRR, Buoy, Ship       | 0.25° × 0.25°, Daily  | Global Ocean        |                [Link](https://www.ncei.noaa.gov/products/optimum-interpolation-sst)                |
+| OSTIA       | Multi-sat IR, MW, Buoy  | 0.05° × 0.05°, Daily  | Global Ocean        |           [Link](https://data.marine.copernicus.eu/products?option=com_csw&task=results)           |
+| G1SST       | Geo, Polar Sats         | 0.01° × 0.01°, Daily  | Global Ocean        |            [Link](https://podaac.jpl.nasa.gov/dataset/JPL_OUROCEAN-L4UHfnd-GLOB-G1SST)             |
+| EARS        | ECMWF Model             | 0.25° × 0.25°, Hourly | Global Ocean        |                                   [Link](https://rda.ucar.edu/)                                    |
+| In-situ     | Buoy Measurements       | 16 Stations, Hourly   | Korean waters       |                                [Link](https://www.nifs.go.kr/kodc)                                 |
+| TRMM        | NASA GSFC PPS           | 0.25°, 3-hourly       | 50°N–50°S           |                            [Link](https://gpm.nasa.gov/data/directory)                             |
+| GridSat     | NOAA                    | 0.07°, 3-hourly       | 70°S–70°N           |                 [Link](https://www.ncei.noaa.gov/products/satellite/gridded-data)                  |
+| DEM         | USGS, NASA SRTM         | 90m, N/A              | 60°N–56°S           |                            [Link](https://srtm.csi.cgiar.org/srtmdata/)                            |
+| Rain        | CMDC (China)            | Point, 12-hourly      | China               |                                    [Link](https://data.cma.cn/)                                    |
+| S2          | Sentinel-2              | 10m, 5-day revisit    | Dafeng, China       |                                [Link](https://scilb.copernicus.eu/)                                |
+| GOCI-II     | GOCI-II Satellite       | 500m, hourly          | Dafeng, China       |                               [Link](https://www.nosc.go.kr/main.do)                               |
+| Wuhan       | GF, Landsat             | 8m, 30m               | Wuhan, China        |                       [Link](https://github.com/lixinghua5540/Wuhan-dataset)                       |
+| Daxing      | LS8 OLI, MODIS          | 30m, 500m, 8 days     | Daxing, Beijing     |               [Link](https://pan.baidu.com/s/1ymgud6tnY6XB5CTCXPUfnw#list/path=%2F)                |
+| AHB         | LS8 OLI, MOD09GA        | 30m, 500m, 16 days    | Ar Horqin Banner    |               [Link](https://pan.baidu.com/s/1ymgud6tnY6XB5CTCXPUfnw#list/path=%2F)                |
+| Tianjin     | LS8 OLI, MOD02HKM       | 30m, 500m, 16 days    | Tianjin, China      |               [Link](https://pan.baidu.com/s/1ymgud6tnY6XB5CTCXPUfnw#list/path=%2F)                |
+| Terra       | Multi-source            | 0.1°, 3-hourly        | Global              |                      [Link](https://github.com/CityMind-Lab/NeurIPS24-Terra)                       |
+| E-SMILE     | Landsat-8               | 30m, 500m, 16 days    | Global              |                [Link](https://www.kaggle.com/datasets/yuxiawhu/extra-data-in-smile)                |
+|             |                         |                       |                     | [Link](https://github.com/Andy-cumt/Spatiotemporal-fusion-dataset-DeepLearning?tab=readme-ov-file) |
+### Evaluation
 
-
+| Paper                                                                                                                                                                | Include                                                                                | **Code**                                                       |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| [A novel framework to assess all-round performances of spatiotemporal fusion models](https://www.sciencedirect.com/science/article/pii/S003442572200116X?via%3Dihub) | RMSE, AD, Edge, and local binary patterns (LBP)、all-round performance assessment (APA) | [Link](https://xzhu-lab.github.io/Pride/Open-Source-Code.html) |
 
 ---
 
